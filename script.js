@@ -3,6 +3,11 @@ const author = document.getElementById('author');
 const addButton = document.getElementById('add-btn');
 const booksList = document.getElementById('books-list');
 
+const bookStore = {
+  this.title = title;
+  this.author = author;
+};
+
 addButton.onclick = function () {
   const inpTitle = title.value;
   const inpAuthor = author.value;
@@ -36,5 +41,7 @@ function showBooks() {
     book.appendChild(hr);
   }
 }
+
+
 
 showBooks();
