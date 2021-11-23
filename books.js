@@ -1,4 +1,5 @@
-/*  eslint linebreak-style: ["error", "windows"]   */
+/* eslint-disable no-restricted-globals */
+/*  eslint linebreak-style: ["error", "unix"]   */
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -48,7 +49,7 @@ function showBook() {
 function removeBook() {
   const removeButtons = document.querySelectorAll('.rmv-btn');
   for (let j = 0; j < removeButtons.length; j += 1) {
-    removeButtons[j].addEventListener('click', () => {
+    removeButtons[j].addEventListener('click', function e() {
       const buttonId = this.id;
       const bookParent = document.getElementById(buttonId).parentElement;
       const bookParentFirstChild = bookParent.firstChild.innerHTML;
