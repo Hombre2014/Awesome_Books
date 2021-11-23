@@ -15,7 +15,6 @@ addButton.onclick = () => {
   newBook.bookAuthor = author.value;
   if (newBook.bookTitle && newBook.bookAuthor) {
     localStorage.setItem(newBook.bookTitle, newBook.bookAuthor);
-    books.push(newBook);
     console.log(books);
     location.reload();
   }
@@ -35,8 +34,9 @@ function showBook() {
     book.appendChild(bookAuthor);
     const key = localStorage.key(i);
     const value = localStorage.getItem(key);
-    bookTitle.innerHTML = `${key}<br>`;
-    bookAuthor.innerHTML = `${value}<br>`;
+    bookTitle.innerHTML = `${key}`;
+    bookTitle.appendChild(br);
+    bookAuthor.innerHTML = `${value}`;
     book.appendChild(removeBtn);
     removeBtn.innerHTML = 'Remove Book';
     removeBtn.className = 'rmv-btn';
@@ -47,10 +47,18 @@ function showBook() {
 }
 
 function removeBook() {
-  const removeButton = document.getElementsByClassName('.rmv-btn');
-  removeButton.onclick = () => {
-
+  const removeButtons = document.querySelectorAll('.rmv-btn');
+  for (let j = 0; j < removeButtons.length; j += 1) {
+    removeButtons[j].addEventListener('click', function() {
+      const buttonId = this.id;
+      const bookParent = document.getElementById(buttonId).parentElement;
+      const bookParentFirstChild = bookParent.firstChild.innerHTML;
+      bookParent.parentNode.removeChild(bookParent);
+      localStorage.removeItem(bookParentFirstChild);
+      location.reload();
+    });
   }
 }
 
 showBook();
+removeBook();

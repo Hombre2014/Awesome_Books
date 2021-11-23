@@ -22,7 +22,6 @@ function showBooks() {
     const book = document.createElement('div');
     const bookTitle = document.createElement('h1');
     const bookAuthor = document.createElement('span');
-    // const bookId = 
     booksList.appendChild(book);
     book.appendChild(bookTitle);
     bookTitle.innerHTML = `${key}<br>`;
