@@ -1,3 +1,5 @@
+/*  eslint linebreak-style: ["error", "windows"]   */
+
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const addButton = document.getElementById('add-btn');
@@ -9,13 +11,11 @@ function Book(bookTitle, bookAuthor) {
 }
 
 const newBook = new Book();
-const books = [];
 addButton.onclick = () => {
   newBook.bookTitle = title.value;
   newBook.bookAuthor = author.value;
   if (newBook.bookTitle && newBook.bookAuthor) {
     localStorage.setItem(newBook.bookTitle, newBook.bookAuthor);
-    console.log(books);
     location.reload();
   }
 };
@@ -28,7 +28,6 @@ function showBook() {
     const book = document.createElement('div');
     const bookTitle = document.createElement('p');
     const bookAuthor = document.createElement('p');
-
     booksList.appendChild(book);
     book.appendChild(bookTitle);
     book.appendChild(bookAuthor);
@@ -49,7 +48,7 @@ function showBook() {
 function removeBook() {
   const removeButtons = document.querySelectorAll('.rmv-btn');
   for (let j = 0; j < removeButtons.length; j += 1) {
-    removeButtons[j].addEventListener('click', function() {
+    removeButtons[j].addEventListener('click', () => {
       const buttonId = this.id;
       const bookParent = document.getElementById(buttonId).parentElement;
       const bookParentFirstChild = bookParent.firstChild.innerHTML;
@@ -60,5 +59,9 @@ function removeBook() {
   }
 }
 
-showBook();
-removeBook();
+function main() {
+  showBook();
+  removeBook();
+}
+
+main();
