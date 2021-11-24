@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "unix"]   */
+/*  eslint linebreak-style: ["error", "windows"]   */
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -16,6 +16,7 @@ class Book {
 
   static addBook(newBook) {
     const book = document.createElement('div');
+    book.classList.add('single-book');
     newBook.bookOrder = order;
     book.innerHTML = `
       <p>"${newBook.bookTitle}" by ${newBook.bookAuthor}</p>

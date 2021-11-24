@@ -1,5 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing {
+  width: 80%;
+  border: 2px solid #000;
+}
+
+.single-book {
+  display: flex;
+  justify-content: space-between;
+}
+
+#head-title {
+  margin: 2rem 0;
+}
+
+.line {
+  margin: 2rem;
+  height: 2px;
+  width: 100px;
+  background-color: #000;
+}
+
+.adding-book h2 {
+  margin-bottom: 1rem;
+}
+
 .entry {
   display: flex;
   flex-direction: column;
   width: 300px;
+  border: none;
+  align-items: flex-end;
+}
+
+.title {
+  margin-bottom: 0.8rem ;
+  width: 100%;
+}
+
+.author {
+  margin-bottom: 0.8rem;
+  width: 100%;
+}
+
+#add-btn {
+  width: 60px;
+  float: right;
 }
