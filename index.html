@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,24 @@
   <link rel="stylesheet" href="styles.css">
   <title>Awesome Books</title>
 </head>
+
 <body>
-  <h1>Awesome Books</h1>
-  <div id="books-list" class="output"></div>
-  <fieldset class="entry">
-    <input type="text" title="Title" id="title" placeholder="Title">
-    <input type="text" title="Author" id="author" placeholder="Author">
-    <button id="add-btn" type="button" title="Add">Add Book</button>
-  </fieldset>
+  <div class="container">
+    <h1 id="head-title">All awesome books</h1>
+    <div class="listing">
+      <div id="books-list" class="output"></div>
+    </div>
+    <div class="line"></div>
+    <div class="adding-book">
+      <h2>Add a new book</h2>
+      <fieldset class="entry">
+        <input type="text" title="Title" id="title" placeholder="Title">
+        <input type="text" title="Author" id="author" placeholder="Author">
+        <button id="add-btn" type="button" title="Add">Add</button>
+      </fieldset>
+    </div>
+  </div>
   <script src="books.js"></script>
 </body>
+
 </html>

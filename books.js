@@ -18,10 +18,8 @@ class Book {
     const book = document.createElement('div');
     newBook.bookOrder = order;
     book.innerHTML = `
-      <p>${newBook.bookTitle}</p>
-      <p>${newBook.bookAuthor}</p>
+      <p>"${newBook.bookTitle}" by ${newBook.bookAuthor}</p>
       <button class="rmv-btn delete" id="${order}">Remove book</button><br>
-      <hr>
     `;
     booksList.appendChild(book);
     order += 1;
