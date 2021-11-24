@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .container {
   width: 60%;
   display: flex;
@@ -26,6 +30,13 @@
 .single-book {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+}
+
+.single-book:nth-child(odd) {
+  background-color: #cccccc;
 }
 
 #head-title {
@@ -51,17 +62,28 @@
   align-items: flex-end;
 }
 
-.title {
+.title,
+.author {
   margin-bottom: 0.8rem ;
   width: 100%;
-}
-
-.author {
-  margin-bottom: 0.8rem;
-  width: 100%;
+  height: 1.5rem;
+  padding-left: 0.4rem;
+  border: 2px solid #000;
 }
 
 #add-btn {
   width: 60px;
   float: right;
+  height: 28px;
+}
+
+.rmv-btn {
+  padding: 0.2rem 0.4rem;
+}
+
+button {
+  box-shadow: 3px 3px rgb(63, 59, 59);
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
 }

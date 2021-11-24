@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "windows"]   */
+/*  eslint linebreak-style: ["error", "unix"]   */
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -20,7 +20,7 @@ class Book {
     newBook.bookOrder = order;
     book.innerHTML = `
       <p>"${newBook.bookTitle}" by ${newBook.bookAuthor}</p>
-      <button class="rmv-btn delete" id="${order}">Remove book</button><br>
+      <button class="rmv-btn delete" id="${order}">Remove</button>
     `;
     booksList.appendChild(book);
     order += 1;
