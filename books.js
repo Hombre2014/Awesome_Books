@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "unix"]   */
+/*  eslint linebreak-style: ["error", "windows"]   */
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -35,6 +35,8 @@ class Book {
     let books;
     if (localStorage.getItem('books') === null) {
       books = [];
+      // const listing = document.querySelector('.listing');
+      // listing.style.border = 'none';
     } else {
       books = JSON.parse(localStorage.getItem('books'));
     }

@@ -87,3 +87,12 @@ button {
   border-radius: 3px;
   cursor: pointer;
 }
+
+button:hover {
+  background-color: rgb(109, 108, 108);
+  color: rgb(235, 235, 235);
+}
+
+button:active {
+  box-shadow: 2px 2px rgb(37, 37, 37);
+}
