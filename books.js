@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "windows"]   */
+/*  eslint linebreak-style: ["error", "unix"]   */
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
