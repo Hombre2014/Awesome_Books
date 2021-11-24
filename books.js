@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "windows"]   */
+/*  eslint linebreak-style: ["error", "unix"]   */
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -35,8 +35,6 @@ class Book {
     let books;
     if (localStorage.getItem('books') === null) {
       books = [];
-      // const listing = document.querySelector('.listing');
-      // listing.style.border = 'none';
     } else {
       books = JSON.parse(localStorage.getItem('books'));
     }
@@ -61,7 +59,7 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
     newArrayBooks = this.getBooks();
     if (newArrayBooks.length === 1) {
-      if (newArrayBooks[0].bookOrder === 1) {
+      if (newArrayBooks[0].bookOrder > 0) {
         newArrayBooks[0].bookOrder = 0;
       }
     } else {
@@ -101,3 +99,7 @@ addButton.onclick = () => {
 };
 
 document.addEventListener('DOMContentLoaded', Book.displayBooks);
+
+if (booksList.firstChild === null) {
+  document.getElementById('listing').style.border = 'none';
+}
