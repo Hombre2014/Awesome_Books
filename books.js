@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "unix"]   */
+/*  eslint linebreak-style: ["error", "windows"]   */
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -54,14 +54,13 @@ class Book {
     let newArrayBooks = [];
     books.forEach((book, index) => {
       if (book.bookOrder === number) {
-        console.log("book.bookOrder: ", book.bookOrder);
         books.splice(index, 1);
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
     newArrayBooks = this.getBooks();
-    if(newArrayBooks.length === 1) {
-      if(newArrayBooks[0].bookOrder === 1) {
+    if (newArrayBooks.length === 1) {
+      if (newArrayBooks[0].bookOrder === 1) {
         newArrayBooks[0].bookOrder = 0;
       }
     } else {
@@ -87,7 +86,6 @@ document.querySelector('#books-list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
 
   // Remove book from store
-  console.log(e.target.id);
   Book.removeBook(e.target.id);
 });
 
@@ -102,50 +100,3 @@ addButton.onclick = () => {
 };
 
 document.addEventListener('DOMContentLoaded', Book.displayBooks);
-
-// function showBook() {
-//   for (let i = 0; i < localStorage.length; i += 1) {
-//     const removeBtn = document.createElement('button');
-//     const hr = document.createElement('hr');
-//     const br = document.createElement('br');
-
-//     const bookTitle = document.createElement('p');
-//     const bookAuthor = document.createElement('p');
-
-//     booksList.appendChild(book);
-//     book.appendChild(bookTitle);
-//     book.appendChild(bookAuthor);
-//     const key = localStorage.key(i);
-//     const value = localStorage.getItem(key);
-//     bookTitle.innerHTML = `${key}`;
-//     bookTitle.appendChild(br);
-//     bookAuthor.innerHTML = `${value}`;
-//     book.appendChild(removeBtn);
-//     removeBtn.innerHTML = 'Remove Book';
-//     removeBtn.className = 'rmv-btn';
-//     removeBtn.setAttribute('id', i);
-//     book.appendChild(br);
-//     book.appendChild(hr);
-//   }
-// }
-
-// function removeBook() {
-//   const removeButtons = document.querySelectorAll('.rmv-btn');
-//   for (let j = 0; j < removeButtons.length; j += 1) {
-//     removeButtons[j].addEventListener('click', function e() {
-//       const buttonId = this.id;
-//       const bookParent = document.getElementById(buttonId).parentElement;
-//       const bookParentFirstChild = bookParent.firstChild.innerHTML;
-//       bookParent.parentNode.removeChild(bookParent);
-//       localStorage.removeItem(bookParentFirstChild);
-//       location.reload();
-//     });
-//   }
-// }
-
-// function main() {
-//   showBook();
-//   removeBook();
-// }
-
-// main();
