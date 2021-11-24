@@ -49,10 +49,10 @@ class Book {
 
   static removeBook(bookOrder) {
     const books = Book.getBooks();
-    const number = parseInt(bookOrder, 10);
+    bookOrder = parseInt(bookOrder, 10);
     let newArrayBooks = [];
     books.forEach((book, index) => {
-      if (book.bookOrder === number) {
+      if (book.bookOrder === bookOrder) {
         books.splice(index, 1);
       }
     });
@@ -64,7 +64,8 @@ class Book {
       }
     } else {
       for (let i = bookOrder; i < newArrayBooks.length; i += 1) {
-        newArrayBooks[bookOrder].bookOrder = number;
+        newArrayBooks[bookOrder].bookOrder = i;
+        bookOrder += 1;
       }
     }
     localStorage.setItem('books', JSON.stringify(newArrayBooks));
