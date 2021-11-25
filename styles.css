@@ -154,7 +154,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 85vh;
+  height: 84vh;
   width: 100%;
   align-items: center;
 }
