@@ -25,6 +25,7 @@ body {
 .listing {
   width: 80%;
   border: 2px solid #000;
+  border-radius: 3px;
 }
 
 .single-book {
@@ -69,6 +70,7 @@ body {
   height: 1.5rem;
   padding-left: 0.4rem;
   border: 2px solid #000;
+  border-radius: 3px;
 }
 
 #add-btn {
