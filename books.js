@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "windows"]   */
+/*  eslint linebreak-style: ["error", "unix"]   */
 import { DateTime } from './luxon.min.js';
 
 const title = document.getElementById('title');
@@ -152,6 +152,11 @@ function dateTime() {
   const currentTime = document.querySelector('.time-date');
   currentTime.innerHTML = now.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
 }
+
+// function updateTime() {
+//   const myVar = 0;
+//   myVar = setInterval(dateTime(), 1000);
+// }
 
 dateTime();
 navigation();

@@ -140,11 +140,15 @@ nav {
   font-weight: bold;
 }
 
+.time-date {
+  width: 100%;
+  margin: 0.5rem 0;
+}
 .wraper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 90vh;
+  height: 85vh;
   width: 100%;
   align-items: center;
 }
@@ -198,10 +202,18 @@ li:last-child {
 
 footer {
   border: 2px solid black;
-  width: 100%;
+  width: 100% !important;
   padding: 0.8rem 0;
   border-radius: 3px;
   margin-top: 2rem;
+  bottom: 1rem;
+  width: 90%;
+}
+
+.dummy {
+  margin-top: 2rem;
+  height: 1px;
+  display: none;
 }
 
 .hide {
