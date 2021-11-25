@@ -147,16 +147,12 @@ function navigation() {
   });
 }
 
-function dateTime() {
+function dT() {
   const now = DateTime.now();
   const currentTime = document.querySelector('.time-date');
   currentTime.innerHTML = now.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
 }
 
-// function updateTime() {
-//   const myVar = 0;
-//   myVar = setInterval(dateTime(), 1000);
-// }
+setInterval(dT, 1000);
 
-dateTime();
 navigation();

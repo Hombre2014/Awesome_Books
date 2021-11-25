@@ -17,10 +17,14 @@
   <div class="container">
     <nav>
       <div class="navigation">
-        <span class="logo">Awesome Books</span>
+        <div class="logo-div">
+          <img class="book-img" alt="Books" src="https://img.icons8.com/ios-filled/50/000000/books.png"/>
+          <span class="logo">Awesome Books</span>
+        </div>
+        
         <div class="menu">
           <ul class="links">
-            <li class="links-item" id="list"><a>List</a></li>
+            <li class="links-item" id="list"><a class="active">List</a></li>
             <li class="links-item" id="add"><a>Add new</a></li>
             <li class="links-item" id="contact"><a>Contact</a></li>
           </ul>
@@ -38,7 +42,7 @@
             <div id="books-list" class="output"></div>
           </div>
         </div>
-        <div class="adding-book">
+        <div class="adding-book hide">
           <h2>Add a new book</h2>
           <fieldset class="entry">
             <input type="text" class="title" title="Title" id="title" placeholder="Title">
@@ -46,7 +50,7 @@
             <button id="add-btn" type="button" title="Add">Add</button>
           </fieldset>
         </div>
-        <section class="contact-us">
+        <section class="contact-us hide">
           <h2>Contact information</h2>
           <p>Do you have any question or you just want to say "Hello"?</p>
           <p>You can reach out to us!</p>
@@ -58,9 +62,8 @@
         </section>
       </main>
       <footer>
-        <p>Copyright &reg; B. Stojanovic and Y. Chamkoriyski, 2021 All rigths reserved</p>
+        <p>Copyright &reg; <a class="authors" href="https://github.com/kakarrot92">B. Stojanovic</a> and <a class="authors" href="https://github.com/Hombre2014">Y. Chamkoriyski</a>, 2021 All rigths reserved</p>
       </footer>
-      <div class="dummy"></div>
     </div>
   </div>
   <script src="luxon.min.js" type="module"></script>

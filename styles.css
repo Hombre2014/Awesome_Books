@@ -5,7 +5,6 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  height: 100vh;
 }
 
 a {
@@ -38,8 +37,16 @@ main {
   width: 100%;
 }
 
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+
+.book-img {
+  padding:  0.5rem;
+}
+
 .listing {
-  
   border: 2px solid #000;
   border-radius: 3px;
 }
@@ -72,7 +79,8 @@ main {
 }
 
 .adding-book h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
+  font-size: 2em;
 }
 
 .entry {
@@ -97,6 +105,8 @@ main {
   display: block;
   height: 1.5rem;
   text-align: right;
+  width: 100%;
+  margin: 0.5rem 0;
 }
 
 #add-btn {
@@ -140,10 +150,6 @@ nav {
   font-weight: bold;
 }
 
-.time-date {
-  width: 100%;
-  margin: 0.5rem 0;
-}
 .wraper {
   display: flex;
   flex-direction: column;
@@ -160,11 +166,6 @@ nav {
 .links {
   display: flex;
   align-items: center;
-}
-
-.adding-book h2 {
-  margin-bottom: 4rem;
-  font-size: 2em;
 }
 
 .links-item {
@@ -194,26 +195,19 @@ li:last-child {
   margin-left: 2rem;
 }
 
-.contact-us ul li{
+.contact-us ul li {
   text-align: left;
   border-right: none;
-  
 }
 
 footer {
   border: 2px solid black;
-  width: 100% !important;
+  position: relative;
+  bottom: 2rem;
+  width: 100%;
   padding: 0.8rem 0;
   border-radius: 3px;
-  margin-top: 2rem;
-  bottom: 1rem;
-  width: 90%;
-}
-
-.dummy {
-  margin-top: 2rem;
-  height: 1px;
-  display: none;
+  margin-top: 4rem;
 }
 
 .hide {
@@ -223,4 +217,10 @@ footer {
 .active {
   color: rgb(56, 110, 180);
   border-bottom: 2px solid rgb(56, 110, 180);
+}
+
+.authors {
+  color: rgb(56, 110, 180);
+  font-weight: 600;
+  cursor: pointer;
 }
