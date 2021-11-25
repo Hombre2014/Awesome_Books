@@ -93,6 +93,12 @@ main {
   border-radius: 3px;
 }
 
+.time-date {
+  display: block;
+  height: 1.5rem;
+  text-align: right;
+}
+
 #add-btn {
   width: 60px;
   float: right;

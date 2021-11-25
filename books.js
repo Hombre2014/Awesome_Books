@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "unix"]   */
+/*  eslint linebreak-style: ["error", "windows"]   */
+import { DateTime } from './luxon.min.js';
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -146,4 +147,11 @@ function navigation() {
   });
 }
 
+function dateTime() {
+  const now = DateTime.now();
+  const currentTime = document.querySelector('.time-date');
+  currentTime.innerHTML = now.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+}
+
+dateTime();
 navigation();
