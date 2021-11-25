@@ -1,5 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing {
+  width: 80%;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+
+.single-book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+}
+
+.single-book:nth-child(odd) {
+  background-color: #ccc;
+}
+
+#head-title {
+  margin: 2rem 0;
+}
+
+.line {
+  margin: 2rem;
+  height: 2px;
+  width: 100px;
+  background-color: #000;
+}
+
+.adding-book h2 {
+  margin-bottom: 1rem;
+}
+
 .entry {
   display: flex;
   flex-direction: column;
   width: 300px;
+  border: none;
+  align-items: flex-end;
+}
+
+.title,
+.author {
+  margin-bottom: 0.8rem;
+  width: 100%;
+  height: 1.5rem;
+  padding-left: 0.4rem;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+
+#add-btn {
+  width: 60px;
+  float: right;
+  height: 28px;
+}
+
+.rmv-btn {
+  padding: 0.2rem 0.4rem;
+}
+
+button {
+  box-shadow: 3px 3px rgb(63, 59, 59);
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(109, 108, 108);
+  color: rgb(235, 235, 235);
+}
+
+button:active {
+  box-shadow: 2px 2px rgb(37, 37, 37);
 }

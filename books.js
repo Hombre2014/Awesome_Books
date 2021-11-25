@@ -7,6 +7,14 @@ const addButton = document.getElementById('add-btn');
 const booksList = document.getElementById('books-list');
 let order = 0;
 
+function clearBorder() {
+  if (booksList.firstChild === null) {
+    document.getElementById('listing').style.border = 'none';
+  } else {
+    document.getElementById('listing').style.border = '2px solid black';
+  }
+}
+
 class Book {
   constructor(bookTitle, bookAuthor, bookOrder) {
     this.bookTitle = bookTitle;
@@ -16,12 +24,11 @@ class Book {
 
   static addBook(newBook) {
     const book = document.createElement('div');
+    book.classList.add('single-book');
     newBook.bookOrder = order;
     book.innerHTML = `
-      <p>${newBook.bookTitle}</p>
-      <p>${newBook.bookAuthor}</p>
-      <button class="rmv-btn delete" id="${order}">Remove book</button><br>
-      <hr>
+      <p>"${newBook.bookTitle}" by ${newBook.bookAuthor}</p>
+      <button class="rmv-btn delete" id="${order}">Remove</button>
     `;
     booksList.appendChild(book);
     order += 1;
@@ -30,6 +37,7 @@ class Book {
   static displayBooks() {
     const books = Book.getBooks();
     books.forEach((newBook) => Book.addBook(newBook));
+    clearBorder();
   }
 
   static getBooks() {
@@ -50,22 +58,23 @@ class Book {
 
   static removeBook(bookOrder) {
     const books = Book.getBooks();
-    const number = parseInt(bookOrder, 10);
+    bookOrder = parseInt(bookOrder, 10);
     let newArrayBooks = [];
     books.forEach((book, index) => {
-      if (book.bookOrder === number) {
+      if (book.bookOrder === bookOrder) {
         books.splice(index, 1);
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
     newArrayBooks = this.getBooks();
     if (newArrayBooks.length === 1) {
-      if (newArrayBooks[0].bookOrder === 1) {
+      if (newArrayBooks[0].bookOrder > 0) {
         newArrayBooks[0].bookOrder = 0;
       }
     } else {
       for (let i = bookOrder; i < newArrayBooks.length; i += 1) {
-        newArrayBooks[bookOrder].bookOrder = number;
+        newArrayBooks[bookOrder].bookOrder = i;
+        bookOrder += 1;
       }
     }
     localStorage.setItem('books', JSON.stringify(newArrayBooks));
@@ -75,6 +84,8 @@ class Book {
     if (el.classList.contains('delete')) {
       el.parentElement.remove();
     }
+    clearBorder();
+    location.reload();
   }
 }
 
