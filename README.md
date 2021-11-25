@@ -44,7 +44,7 @@ In this project, you will build a basic website that allows users to add/remove 
 ## Built With
 
 - Major languages: HTMLC, CSS, JS
-- Frameworks: none 
+- Frameworks: none
 - Technologies used: Git
 
 ## Live Demo
