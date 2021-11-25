@@ -5,10 +5,11 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
 .container {
-  width: 60%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,13 +18,24 @@ body {
   text-align: center;
 }
 
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .output {
   display: flex;
   flex-direction: column;
 }
 
+.all-books {
+  width: 100%;
+}
+
 .listing {
-  width: 80%;
+  
   border: 2px solid #000;
   border-radius: 3px;
 }
@@ -49,6 +61,10 @@ body {
   height: 2px;
   width: 100px;
   background-color: #000;
+}
+
+.adding-book {
+  margin-top: 2rem;
 }
 
 .adding-book h2 {
@@ -112,6 +128,15 @@ nav {
   align-items: center;
 }
 
+.wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  width: 100%;
+  align-items: center;
+}
+
 .logo {
   padding: 0.8rem 0 0.8rem 1rem;
 }
@@ -121,7 +146,12 @@ nav {
   align-items: center;
 }
 
-li {
+.adding-book h2 {
+  margin-bottom: 4rem;
+  font-size: 2em;
+}
+
+.links-item {
   list-style: none;
   margin-left: 1.5rem;
   border-right: 2px solid black;
@@ -131,4 +161,30 @@ li {
 
 li:last-child {
   border-right: none;
+}
+
+.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  margin-bottom: 4rem;
+  font-size: 2em;
+}
+
+.contact ul {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.contact ul li{
+  text-align: left;
+  border-right: none;
+  
+}
+
+footer {
+  border: 2px solid black;
+  width: 100%;
+  padding: 0.8rem 0;
 }
