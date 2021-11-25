@@ -7,6 +7,14 @@ const addButton = document.getElementById('add-btn');
 const booksList = document.getElementById('books-list');
 let order = 0;
 
+function clearBorder() {
+  if (booksList.firstChild === null) {
+    document.getElementById('listing').style.border = 'none';
+  } else {
+    document.getElementById('listing').style.border = '2px solid black';
+  }
+}
+
 class Book {
   constructor(bookTitle, bookAuthor, bookOrder) {
     this.bookTitle = bookTitle;
@@ -29,6 +37,7 @@ class Book {
   static displayBooks() {
     const books = Book.getBooks();
     books.forEach((newBook) => Book.addBook(newBook));
+    clearBorder();
   }
 
   static getBooks() {
@@ -75,6 +84,8 @@ class Book {
     if (el.classList.contains('delete')) {
       el.parentElement.remove();
     }
+    clearBorder();
+    location.reload();
   }
 }
 
@@ -100,7 +111,3 @@ addButton.onclick = () => {
 };
 
 document.addEventListener('DOMContentLoaded', Book.displayBooks);
-
-if (booksList.firstChild === null) {
-  document.getElementById('listing').style.border = 'none';
-}
