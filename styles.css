@@ -98,3 +98,37 @@ button:hover {
 button:active {
   box-shadow: 2px 2px rgb(37, 37, 37);
 }
+
+/* Navigation section */
+nav {
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.logo {
+  padding: 0.8rem 0 0.8rem 1rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin-left: 1.5rem;
+  border-right: 2px solid black;
+  padding-right: 1rem;
+  line-height: 2.4rem;
+}
+
+li:last-child {
+  border-right: none;
+}
