@@ -13,23 +13,61 @@
   <title>Awesome Books</title>
 </head>
 
-<body>
+<body >
   <div class="container">
-    <h1 id="head-title">All awesome books</h1>
-    <div class="listing" id="listing">
-      <div id="books-list" class="output"></div>
+    <nav>
+      <div class="navigation">
+        <div class="logo-div">
+          <img class="book-img" alt="Books" src="https://img.icons8.com/ios-filled/50/000000/books.png"/>
+          <span class="logo">Awesome Books</span>
+        </div>
+        
+        <div class="menu">
+          <ul class="links">
+            <li class="links-item" id="list"><a class="active">List</a></li>
+            <li class="links-item" id="add"><a>Add new</a></li>
+            <li class="links-item" id="contact"><a>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="time-date">
+
     </div>
-    <div class="line"></div>
-    <div class="adding-book">
-      <h2>Add a new book</h2>
-      <fieldset class="entry">
-        <input type="text" class="title" title="Title" id="title" placeholder="Title">
-        <input type="text" class="author" title="Author" id="author" placeholder="Author">
-        <button id="add-btn" type="button" title="Add">Add</button>
-      </fieldset>
+    <div class="wraper">
+      <main>
+        <div class="all-books">
+          <h1 id="head-title">All awesome books</h1>
+          <div class="listing" id="listing">
+            <div id="books-list" class="output"></div>
+          </div>
+        </div>
+        <div class="adding-book hide">
+          <h2>Add a new book</h2>
+          <fieldset class="entry">
+            <input type="text" class="title" title="Title" id="title" placeholder="Title">
+            <input type="text" class="author" title="Author" id="author" placeholder="Author">
+            <button id="add-btn" type="button" title="Add">Add</button>
+          </fieldset>
+        </div>
+        <section class="contact-us hide">
+          <h2>Contact information</h2>
+          <p>Do you have any question or you just want to say "Hello"?</p>
+          <p>You can reach out to us!</p>
+          <ul>
+            <li>Our e-mail: mail@mail.com</li>
+            <li>Our phone number: 00462444621</li>
+            <li>Our addres: Street name 22, 8456 City, Country</li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <p>Copyright &reg; <a class="authors" href="https://github.com/kakarrot92">B. Stojanovic</a> and <a class="authors" href="https://github.com/Hombre2014">Y. Chamkoriyski</a>, 2021 All rigths reserved</p>
+      </footer>
     </div>
   </div>
-  <script src="books.js"></script>
+  <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+  <script src="books.js" type="module"></script>
 </body>
 
 </html>

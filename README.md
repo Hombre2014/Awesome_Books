@@ -25,7 +25,7 @@ In this project, you will build a basic website that allows users to add/remove 
 - [x] Don't use any library or framework, use only plain JavaScript.
 - [x] You need to use pair-programming for this project. We will check to see if both partners submitted code by looking at the commit history for each project. Therefore you need to use only one repository for your pair-programming group.
 
-## Project requirements (step 2) refactor to use JavaScript classes
+## Project requirements refactor to use JavaScript classes (step 2):
 
 - [x] Use JavaScript classes instead of objects and arrays.
   - [x] You can use objects and arrays, but do it inside classes.
@@ -34,18 +34,35 @@ In this project, you will build a basic website that allows users to add/remove 
 - [x] Don't use any library or framework, use only plain JavaScript.
 - [x] You need to use pair-programming for this project. We will check to see if both partners submitted code by looking at the commit history for each project. Therefore you need to use only one repository for your pair-programming group.
 
-## Project requirements (step 3) style core elements
+## Project requirements style core elements (step 3):
 
-- You can use the styles of your choice (colors, fonts, backgrounds, etc.), but try to follow the general layout.
-- Concentrate on the general layout, rather than the details.
-- You can use plain CSS or a CSS framework (like Bootstrap) if you prefer.
+- [x] You can use the styles of your choice (colors, fonts, backgrounds, etc.), but try to follow the general layout.
+- [x] Concentrate on the general layout, rather than the details.
+- [x] You can use plain CSS or a CSS framework (like Bootstrap) if you prefer.
+- [x] You need to use pair-programming for this project. We will check to see if both partners submitted code by looking at the commit history for each project. Therefore you need to use only one repository for your pair-programming group.
+
+## Project requirements a complete website with navigation (step 4):
+- Modify the Awesome books application to have:
+  - A Navigation bar.
+  - Three content sections:
+    - a. Books list.
+    - b. Add book form.
+    - c. Contact info.
+- Use this wireframe as a guide:
+
+![screenshot](./awesome_books_full_website.png)
+
+- Make sure that when you click on any of the links, the main area changes to display only one of the three content sections. (Hint: you can simply add and remove CSS classes to display or hide the content.)
+- To change the contents of the page, don't use any library or framework, use only plain JavaScript and CSS.
+- Display the current date below the navigation bar. For this requirement you should use a library - [Luxon](https://moment.github.io/luxon/#/install).
+  - See the article [Get the current date and time](https://moment.github.io/luxon/#/tour?id=get-the-current-date-and-time).
 - You need to use pair-programming for this project. We will check to see if both partners submitted code by looking at the commit history for each project. Therefore you need to use only one repository for your pair-programming group.
 
 ## Built With
 
 - Major languages: HTMLC, CSS, JS
 - Frameworks: none
-- Technologies used: Git
+- Technologies used: Git, Luxon
 
 ## Live Demo
 

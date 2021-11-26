@@ -7,8 +7,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
-  width: 60%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,13 +21,32 @@ body {
   text-align: center;
 }
 
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .output {
   display: flex;
   flex-direction: column;
 }
 
+.all-books {
+  width: 100%;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+
+.book-img {
+  padding: 0.5rem;
+}
+
 .listing {
-  width: 80%;
   border: 2px solid #000;
   border-radius: 3px;
 }
@@ -51,8 +74,13 @@ body {
   background-color: #000;
 }
 
+.adding-book {
+  margin-top: 2rem;
+}
+
 .adding-book h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
+  font-size: 2em;
 }
 
 .entry {
@@ -71,6 +99,14 @@ body {
   padding-left: 0.4rem;
   border: 2px solid #000;
   border-radius: 3px;
+}
+
+.time-date {
+  display: block;
+  height: 1.5rem;
+  text-align: right;
+  width: 100%;
+  margin: 0.5rem 0;
 }
 
 #add-btn {
@@ -97,4 +133,94 @@ button:hover {
 
 button:active {
   box-shadow: 2px 2px rgb(37, 37, 37);
+}
+
+/* Navigation section */
+nav {
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin-top: 2rem;
+  align-items: center;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 84vh;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  padding: 0.8rem 0 0.8rem 1rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links-item {
+  list-style: none;
+  margin-left: 1.5rem;
+  border-right: 2px solid black;
+  padding-right: 1rem;
+  line-height: 2.4rem;
+  cursor: pointer;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+.contact-us {
+  margin-top: 2rem;
+}
+
+.contact-us h2 {
+  margin-bottom: 4rem;
+  font-size: 2em;
+}
+
+.contact-us ul {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.contact-us ul li {
+  text-align: left;
+  border-right: none;
+}
+
+footer {
+  border: 2px solid black;
+  position: relative;
+  bottom: 2rem;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 3px;
+  margin-top: 4rem;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  color: rgb(56, 110, 180);
+  border-bottom: 2px solid rgb(56, 110, 180);
+}
+
+.authors {
+  color: rgb(56, 110, 180);
+  font-weight: 600;
+  cursor: pointer;
 }
