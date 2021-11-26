@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-/*  eslint linebreak-style: ["error", "unix"]   */
+/*  eslint linebreak-style: ["error", "windows"]   */
 import { DateTime } from './luxon.min.js';
 
 const title = document.getElementById('title');
