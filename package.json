@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "full-icu": "^1.4.0",
-    "luxon": "^2.1.1"
+    "luxon": "^2.1.1",
+    "postcss": "^8.1.0"
   }
 }
