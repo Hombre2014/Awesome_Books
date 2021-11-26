@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 /*  eslint linebreak-style: ["error", "unix"]   */
-import { DateTime } from './luxon.min.js';
+/* eslint-disable no-undef */
 
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -148,11 +148,13 @@ function navigation() {
 }
 
 function dT() {
-  const now = DateTime.now();
+  const now = luxon.DateTime.now();
   const currentTime = document.querySelector('.time-date');
-  currentTime.innerHTML = now.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+  currentTime.innerHTML = now.toLocaleString(luxon.DateTime.DATETIME_FULL_WITH_SECONDS);
 }
 
 setInterval(dT, 1000);
 
 navigation();
+
+// luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_FULL_WITH_SECONDS);
