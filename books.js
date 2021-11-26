@@ -156,5 +156,3 @@ function dT() {
 setInterval(dT, 1000);
 
 navigation();
-
-// luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_FULL_WITH_SECONDS);
