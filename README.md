@@ -2,7 +2,7 @@
 
 # Yuriy Chamkoriyski and Bogdan Stojanovic Microverse Awesome Books project
 
-> The first own code review for a trial project - Product page.
+> First Javascript project from Module 2 at Microverse
 
 ![screenshot](./app_screenshot.png)
 
@@ -19,7 +19,7 @@ In this project, you will build a basic website that allows users to add/remove 
     - [x] The new book is displayed in the page.
 - [x] Make sure that when a user clicks the "Remove" button:
     - [x] The correct book is removed from the collection.
-    - [x] The correct book dissapears from the page.
+    - [x] The correct book disappears from the page.
 - [x] Make sure that data is preserved in the browser's memory by using localStorage.
 - [x] To debug your application, you can use console.log(). Remember to remove debugging code before pushing your code to the remote repository.
 - [x] Don't use any library or framework, use only plain JavaScript.
@@ -60,7 +60,7 @@ In this project, you will build a basic website that allows users to add/remove 
 
 ## Built With
 
-- Major languages: HTMLC, CSS, JS
+- Major languages: HTML, CSS, JS
 - Frameworks: none
 - Technologies used: Git, Luxon
 
