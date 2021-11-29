@@ -42,13 +42,13 @@ In this project, you will build a basic website that allows users to add/remove 
 - [x] You need to use pair-programming for this project. We will check to see if both partners submitted code by looking at the commit history for each project. Therefore you need to use only one repository for your pair-programming group.
 
 ## Project requirements a complete website with navigation (step 4):
-- Modify the Awesome books application to have:
-  - A Navigation bar.
-  - Three content sections:
-    - a. Books list.
-    - b. Add book form.
-    - c. Contact info.
-- Use this wireframe as a guide:
+- [x] Modify the Awesome books application to have:
+  - [x] A Navigation bar.
+  - [x] Three content sections:
+    - [x] a. Books list.
+    - [x] b. Add book form.
+    - [x] c. Contact info.
+- [x] Use this wireframe as a guide:
 
 ![screenshot](./awesome_books_full_website.png)
 
